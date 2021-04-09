@@ -1,4 +1,4 @@
-# python-primeros-pasos
+# python_introduccion
 
 * `saludos.py`
   * importar librerías de Python
