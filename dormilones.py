@@ -61,9 +61,20 @@ contador.finalizar()
 contador.imprimir()
 
 
-
-
-
 # Pregunta: ¿por qué los segundos que pasaron son 2, 0 y 1 respectivamente?
+# * 2 segundos: Determinado por las funciones dormir().
+# * 0 segundo: Porque los hilos se ejecutan de forma independiente, las funciones se ejecutan una después de la otra
+# sin perder tiempo.
+# * 1 segundo: porque entre las funciones iniciar() y finalizar se encuentran los hilos con el método join() el cual
+# indica que la secuencia debe esperar hasta que finalicen los hilos.
+
 # Pregunta: ¿cuántos hilos o threads hay en cada caso?
+# 1er caso: 1 hilo de forma secuencial (1).
+# 2do caso: 1 hilo llamante y 2 hilos llamados (3).
+# 3er caso: 1 hilo llamante y 2 hilos llamados (3).
+
 # Pregunta: los últimos dos ejemplos tienen 3 threads cada uno, ¿cuál sería la diferencia entonces?
+# El primero de los 3 threads se ejecutan de forma paralela.
+# El segundo con los 3 threads primero se ejecuta el hilo llamante, espera a que terminen los dos hilos llamados y
+# una vez finalizados estos el llamante continua y finaliza la ejecución.
+
